@@ -1,2 +1,2 @@
 # Percolation_Simulation
-Monte Carlo Simulation of a percolation system to approximate threshold value
+A Monte Carlo Simulation of a percolation system designed to estimate the percolation threshold value.
