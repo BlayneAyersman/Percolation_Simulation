@@ -11,7 +11,7 @@ public class PercolationStats {
     private double mean = 0;                                            // Mean of threshold values
     private double stddev = 0;                                          // Standard deviation of threshold values
     private double confidenceHi;                                        // High end of confidence interval
-    private double confidenceLo = 0;                                    // Low end of confidence interval
+    private double confidenceLow = 0;                                    // Low end of confidence interval
 
     // Perform independent trials on an n x n grid
     // Accepts grid row/column length and number of simulations to perform as integer arguments
@@ -58,7 +58,7 @@ public class PercolationStats {
         mean = StdStats.mean(thresholds);
         stddev = StdStats.stddev(thresholds);
         confidenceHi = mean + (CONFIDENCE_95 * stddev / Math.sqrt(trials));
-        confidenceLo = mean - (CONFIDENCE_95 * stddev / Math.sqrt(trials));
+        confidenceLow = mean - (CONFIDENCE_95 * stddev / Math.sqrt(trials));
     }
 
     // Site object holds row and column integer values corresponding to the location of a grid element
@@ -91,8 +91,8 @@ public class PercolationStats {
     }
 
     // Return the low endpoint of the 95% confidence interval
-    public double confidenceLo() {
-        return confidenceLo;
+    public double confidenceLow() {
+        return confidenceLow;
     }
 
     // Return the high endpoint of the 95% confidence interval
@@ -114,7 +114,6 @@ public class PercolationStats {
         StdOut.println("                             Results\n------------------------------------------------------------------");
         StdOut.println("Mean                    =  " + pStats.mean());
         StdOut.println("Standard Deviation      =  " + pStats.stddev());
-        StdOut.println("95% Confidence Interval = [" + pStats.confidenceLo() + ", " + pStats.confidenceHi() + "]");
+        StdOut.println("95% Confidence Interval = [" + pStats.confidenceLow() + ", " + pStats.confidenceHi() + "]");
     }
 }
-
