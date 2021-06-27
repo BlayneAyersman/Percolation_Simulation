@@ -1,5 +1,7 @@
-# Percolation Simulation
-TODO: Add summary here
+# Disclaimer
+My contribution to this project was authoring the underlying Percolation Model API which is leveraged by the rest of the project (Percolation.java) & the program which runs a Monte Carlo simulation to estimate the percolation threshold value (PercolationStats.java).
+
+All other project files apart from some screenshots of program output were written by the fine folks at Princeton University.
 
 ## Percolation
 Given a composite system comprised of randomly distributed insulating and metallic materials, what fraction of the materials need to be metallic so that the composite system is an electrical conductor? Given a porous landscape with water on the surface (or oil below), under what conditions will the water be able to drain through to the bottom (or the oil to rise through to the surface)? Scientists have been able to model such situations using an abstract process known as percolation.
@@ -37,9 +39,10 @@ To estimate the percolation threshold, the program conducts the following comput
 
 For example, if sites are opened uniformly at random in a 20-by-20 grid, and the system percolates after opening the 204th site, then the estimate of the percolation threshold for that simulation would be 204/400 = 0.51
 
-The program will repeat this experiment T number of times (inputted by the user), storing the p* estimation results from each experiment. The program then calculates the sample mean and sample standard deviation of the results and uses them to provide a 95% confidence interval for the percolation threshold.
+The program will simulate this experiment T number of times (inputted by the user), storing the p* estimation results from each simulation. The program then calculates the sample mean and sample standard deviation of the results and uses them to provide a 95% confidence interval for the percolation threshold.
 
-The results of the simulation demonstrate the percolation threshold to be ~0.593
+## Results
+The results of running the program (PercolationStats.java) with various grid-size inputs (examples pictured below) demonstrate the percolation threshold p* to be approximately 0.593.
 
 <p>
   <img src="screenshots/1000n_1000t.png" width="550" />
