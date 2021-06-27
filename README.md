@@ -10,15 +10,20 @@ We model a percolation system using an n-by-n grid of sites. Each site is either
 For the insulating/metallic materials example, the open sites correspond to metallic materials, so a system that percolates has a metallic path from top to bottom, with full sites acting as conductors. For the porous substance example, the open sites would correspond to empty space through which water might flow, such that a percolating system would let water fill open sites, flowing from the top row to bottom row of the grid.
 
 <p float="left">
-  <img src="screenshots/percolates.png" height="300" style="padding-right:20px"/>
+  <img src="screenshots/percolates.png" height="300"/>
   <img src="screenshots/does_not_percolate.png" height="300" />
 </p>
 
-The implementation of this model is achieved by using a Weighted Quick Union data structure to track the chain of connection between open sites.
+The implementation of this model is achieved by using a Weighted Quick Union algorithm (imported from a Java library provided by Princeton University) to track the chain of connection between open sites.
 
 ## The Problem
 In a famous scientific problem, researchers are interested in the following question: 
 If sites are independently set to be open with probability p (and therefore blocked with probability 1 − p), what is the probability that the system percolates? When p equals 0 (no sites are open), the system does not percolate; when p equals 1 (all sites are open), the system percolates.
+
+<p float="left">
+  <img title:"20-20 grid" src="screenshots/vacancy probability 20-20.png" height="300"/>
+  <img title:"100-100 grid" src="screenshots/vacancy probability 100-100.png" height="300" />
+</p>
 
 When n is sufficiently large, there is a threshold value p* such that when p < p* a random n-by-n grid almost never percolates, and when p > p*, a random n-by-n grid almost always percolates. No mathematical solution for determining the percolation threshold p* has yet been derived. Thus, the task of this program is to estimate p*. 
 
