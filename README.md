@@ -9,7 +9,10 @@ We model a percolation system using an n-by-n grid of sites. Each site is either
 
 For the insulating/metallic materials example, the open sites correspond to metallic materials, so a system that percolates has a metallic path from top to bottom, with full sites acting as conductors. For the porous substance example, the open sites would correspond to empty space through which water might flow, such that a percolating system would let water fill open sites, flowing from the top row to bottom row of the grid.
 
-<img src="screenshots/percolates.png" width="150" height="100" /> 
+<div style="width:435px; height:320px">
+<img src="screenshots/percolates.png"/>
+<img src="screenshots/does_not_percolate.png"/> 
+</div>
 
 The implementation of this model is achieved by using a Weighted Quick Union data structure to track the chain of connection between open sites.
 
