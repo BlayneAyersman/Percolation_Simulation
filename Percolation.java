@@ -25,7 +25,7 @@ public class Percolation {
         uf2 = new WeightedQuickUnionUF(nSquared + 1);           // No virtual bottom site
     }
 
-    // Opens the site (row, col) if it is not open already and connects the site to any adjacent open sites
+    // Opens the site (row, col) if it is not open already (connects the site to any adjacent open sites)
     public void open(int row, int col) {
         if (row < 1 || col < 1 || row > n || col > n)
             throw new IllegalArgumentException("row or column argument is outside of range");
