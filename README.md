@@ -43,4 +43,4 @@ The results of the simulation demonstrate the percolation threshold to be ~0.593
 
 <img src="screenshots/1000n 1000t.png" />
 <img src="screenshots/500n 10000t.png" />
-<img src="screenshots/200n 25000t.png" />
+<img src="screenshots/250n 25000t.png" />
