@@ -42,7 +42,7 @@ The program will repeat this experiment T number of times (inputted by the user)
 The results of the simulation demonstrate the percolation threshold to be ~0.593
 
 <p float="center">
-  <img src="screenshots/250n_25000t.png" width="550" />
   <img src="screenshots/500n_10000t.png" width="550" />
+  <img src="screenshots/250n_25000t.png" width="550" />
   <img src="screenshots/1000n_1000t.png" width="550" />
 </p>
