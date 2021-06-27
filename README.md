@@ -21,8 +21,8 @@ In a famous scientific problem, researchers are interested in the following ques
 If sites are independently set to be open with probability p (and therefore blocked with probability 1 − p), what is the probability that the system percolates? When p equals 0 (no sites are open), the system does not percolate; when p equals 1 (all sites are open), the system percolates. The plots below show the site vacancy probability p versus the percolation probability for a 20-by-20 random grid (left) and a 100-by-100 random grid (right).
 
 <p float="left">
-  <img src="screenshots/vacancy probability 20-20.png" height="200"/>
-  <img src="screenshots/vacancy probability 100-100.png" height="200" />
+  <img src="screenshots/vacancy probability 20-20.png" height="250"/>
+  <img src="screenshots/vacancy probability 100-100.png" height="250" />
 </p>
 
 When n is sufficiently large, there is a threshold value p* such that when p < p* a random n-by-n grid almost never percolates, and when p > p*, a random n-by-n grid almost always percolates. No mathematical solution for determining the percolation threshold p* has yet been derived. Thus, the task of this program is to estimate p*. 
