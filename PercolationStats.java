@@ -37,7 +37,7 @@ public class PercolationStats {
             // Fill blockedSites array with all row/column locations in the percolation grid
             for (int row = 0; row < n; row++)
                 for (int col = 0; col < n; col++)
-                    blockedSites[row * n + col] = new Site(row + 1, col + 1);
+                    blockedSites[n * row + col] = new Site(row + 1, col + 1);
 
             while (!percolation.percolates()) {                         // Until the system percolates
                 int siteIdx = StdRandom.uniform(numBlocked);            // Generate random blockedSites index
@@ -52,7 +52,9 @@ public class PercolationStats {
             }                                                           // Once the system percolates,
             thresholds[t] = (double) percolation.numberOfOpenSites()
                     / (double) gridSize;                                // Calculate and set threshold value at current index
-        }                                                               // Increment t
+        }                                                               // Begin next trial
+
+        // After all trials have been completed, calculate statistics
         mean = StdStats.mean(thresholds);
         stddev = StdStats.stddev(thresholds);
         confidenceHi = mean + (CONFIDENCE_95 * stddev / Math.sqrt(trials));
@@ -101,14 +103,18 @@ public class PercolationStats {
     // Test client
     public static void main(String[] args) {
         // Read grid size and number of trial simulations to perform from common input
+        StdOut.print("Please input grid size as a single integer: ");   // Prompt for size input
         int n = StdIn.readInt();                                        // Read grid size from common input
+        StdOut.print("Please input number of trials: ");                // Prompt for trials input
         int trials = StdIn.readInt();                                   // Read number of trials from common input
+        StdOut.println();
         PercolationStats pStats = new PercolationStats(n, trials);      // Initialize new PercolationStats object to analyze simulation results
 
         // Output statistics
-        StdOut.println("mean                    = " + pStats.mean());
-        StdOut.println("stddev                  = " + pStats.stddev());
-        StdOut.println("95% confidence interval = [" + pStats.confidenceLo() + ", " + pStats.confidenceHi() + "]");
+        StdOut.println("                             Results\n------------------------------------------------------------------");
+        StdOut.println("Mean                    =  " + pStats.mean());
+        StdOut.println("Standard Deviation      =  " + pStats.stddev());
+        StdOut.println("95% Confidence Interval = [" + pStats.confidenceLo() + ", " + pStats.confidenceHi() + "]");
     }
 }
 
