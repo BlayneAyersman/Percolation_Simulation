@@ -1,8 +1,10 @@
 /******************************************************************************
  *  Compilation:  javac InteractivePercolationVisualizer.java
  *  Execution:    java InteractivePercolationVisualizer n
- *  Dependencies: PercolationVisualizer.java Percolation.java
- *                StdDraw.java StdOut.java
+ *  Dependencies: Percolation.java
+ *                PercolationVisualizer.java
+ *                StdDraw.java
+ *                StdOut.java
  *
  *  This program takes the grid size n as a command-line argument.
  *  Then, the user repeatedly clicks sites to open with the mouse.
@@ -18,7 +20,7 @@ public class InteractivePercolationVisualizer {
 
     public static void main(String[] args) {
         // n-by-n percolation system (read from command-line, default = 10)
-        int n = 10;          
+        int n = 10;
         if (args.length == 1) n = Integer.parseInt(args[0]);
 
         // repeatedly open site specified my mouse click and draw resulting system
@@ -44,7 +46,7 @@ public class InteractivePercolationVisualizer {
 
                 // open site (i, j) provided it's in bounds
                 if (i >= 1 && i <= n && j >= 1 && j <= n) {
-                    if (!perc.isOpen(i, j)) { 
+                    if (!perc.isOpen(i, j)) {
                         StdOut.println(i + " " + j);
                     }
                     perc.open(i, j);

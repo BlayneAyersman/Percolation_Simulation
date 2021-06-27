@@ -1,3 +1,21 @@
+/******************************************************************************
+ *  Author: Blayne Ayersman
+ *  Last Edit Date: 6/27/2021
+ *  Dependencies: Percolation.java
+ *                StdStats.java
+ *                StdRandom.java
+ *                StdIn.java
+ *                StdOut.java
+ *
+ *  This program accepts the grid size 'n' and number of trials 't' from the user as common input.
+ *  The program then performs a Monte Carlo simulation consisting of t number of trials on an n size percolation system.
+ *  For each trial, sites are opened at uniform random in the n-by-n percolation system until it percolates.
+ *  The ratio of opened sites over all sites in the system is then saved as an estimation of the percolation threshold, p*.
+ *  Once all trials are complete, the program then calculates the sample mean & standard deviation of p*, which it outputs
+ *  along with a 95% confidence interval for the value of p*.
+ *
+ ******************************************************************************/
+
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
@@ -11,7 +29,7 @@ public class PercolationStats {
     private double mean = 0;                                            // Mean of threshold values
     private double stddev = 0;                                          // Standard deviation of threshold values
     private double confidenceHi;                                        // High end of confidence interval
-    private double confidenceLow = 0;                                    // Low end of confidence interval
+    private double confidenceLow = 0;                                   // Low end of confidence interval
 
     // Perform independent trials on an n x n grid
     // Accepts grid row/column length and number of simulations to perform as integer arguments

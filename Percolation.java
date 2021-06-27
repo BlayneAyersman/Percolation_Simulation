@@ -1,3 +1,12 @@
+/******************************************************************************
+ *  Author: Blayne Ayersman
+ *  Last Edit Date: 6/27/2021
+ *  Dependencies: WeightedQuickUnionUF.java
+ *
+ *  This class serves as an API through which to model a percolation system.
+ *
+ ******************************************************************************/
+
 import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 
 // Models a percolation system with NxN sites by using an optimized union-find data structure.
