@@ -7,8 +7,6 @@
  *
  ******************************************************************************/
 
-import edu.princeton.cs.algs4.WeightedQuickUnionUF;
-
 // Models a percolation system with NxN sites by using an optimized union-find data structure.
 public class Percolation {
     private final int n;                                        // Number of rows/columns

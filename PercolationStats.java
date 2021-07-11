@@ -16,11 +16,6 @@
  *
  ******************************************************************************/
 
-import edu.princeton.cs.algs4.StdIn;
-import edu.princeton.cs.algs4.StdOut;
-import edu.princeton.cs.algs4.StdRandom;
-import edu.princeton.cs.algs4.StdStats;
-
 // Performs a Monte Carlo simulation of a percolation system to approximate threshold value (p*)
 public class PercolationStats {
     // Declare private class members
