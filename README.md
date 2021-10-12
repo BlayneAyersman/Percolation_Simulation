@@ -49,3 +49,21 @@ The results of running the program (PercolationStats.java) with various grid-siz
   <img src="screenshots/500n_10000t.png" width="550" />
   <img src="screenshots/250n_25000t.png" width="550" />
 </p>
+
+## How To Use
+ Compilation:  **javac InteractivePercolationVisualizer.java**
+ Execution:    **java InteractivePercolationVisualizer n**
+ where **n** is an integer representing the number of rows/columns, to display an interactive grid of n-by-n size. Clicking on a site in the grid will open the site, displaying it as white rather than black. Full sites will be displayed in blue, and an indicator will display when the system percolates.
+
+
+ Compilation:  **javac PercolationVisualizer.java**
+ Execution:    **java PercolationVisualizer exampleFile.txt**
+ where **exampleFile.txt** is the name of a text file local to the project where the first line in the file contains an integer, n, representing the n-by-n dimensions of the grid, and each following line contains the space-separated row/column coordinates of the sites to be opened in the grid (see example input text files in project folder for examples).
+
+
+Compilation:  **javac PercolationStats.java**
+Execution:    **java PercolationStats**
+The program will prompt the user for two inputs:
+First, an integer representing the n-by-n grid size of the percolation system to to be simulated.
+Second, the number of simulations to run.
+The program will then run the aforementioned monte carlo simulation based on the user input and display the results to common output.

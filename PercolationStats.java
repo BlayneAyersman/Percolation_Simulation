@@ -1,6 +1,10 @@
 /******************************************************************************
  *  Author: Blayne Ayersman
  *  Last Edit Date: 6/27/2021
+ *
+ *  Compilation:  javac PercolationStats.java
+ *  Execution:    java PercolationStats
+ *
  *  Dependencies: Percolation.java
  *                StdStats.java
  *                StdRandom.java
